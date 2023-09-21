@@ -5,7 +5,31 @@ body {
     font-family: Arial, sans-serif;
 }
 
-header, main, h1, h2, h3, p, ul, li {
+/* Specific rule for h1 */
+h1 {
+    color: yellow;
+    border-bottom: 1px solid white;  /* Add a white border at the bottom */
+    padding-bottom: 10px;  /* Optional: Add some padding at the bottom for spacing */
+}
+
+h3 {
+    color: yellow;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h3::after {
+    content: "";
+    position: absolute;
+    left: 50%; /* Start the line at the center */
+    bottom: 0; /* Align to the bottom of the element */
+    transform: translateX(-50%); /* Center the line */
+    width: 50%; /* Line is 50% of the element's width */
+    border-bottom: 1px solid white; /* White line */
+}
+
+/* General rule for other elements */
+header, main, h2, p, ul, li {
     color: white;
 }
 
@@ -30,4 +54,35 @@ a {
 /* Optional: To change the color when hovering over the link */
 a:hover {
     color: orange;
+}
+
+.underline {
+    border-bottom: 2px solid #5b5b5b;  /* change the color and thickness as needed */
+}
+.contact-info {
+    background-color: #5b5b5b; /* light gray background */
+    color: black; /* text color */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-info p {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.contact-info strong {
+    font-weight: 600;
 }
