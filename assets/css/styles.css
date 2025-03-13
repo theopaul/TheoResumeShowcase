@@ -1,70 +1,123 @@
 body {
-    background-color: black;
-    color: white;
-    text-align: center;
-    font-family: Arial, sans-serif;
+    background-color: #1D2226;
+    color: #FFFFFF;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 /* Specific rule for h1 */
 h1 {
-    color: yellow;
-    border-bottom: 1px solid white;  /* Add a white border at the bottom */
-    padding-bottom: 10px;  /* Optional: Add some padding at the bottom for spacing */
+    color: #70B5F9;
+    border-bottom: 1px solid #414141;
+    padding-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+h2 {
+    color: #FFFFFF;
+    background-color: #2D3A46;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.6em;
+    transition: background-color 0.3s;
+    text-align: left;
+}
+
+h2:hover {
+    background-color: #394B5C;
 }
 
 h3 {
-    color: yellow;
+    color: #70B5F9;
     position: relative;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
+    font-size: 1.3em;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 h3::after {
     content: "";
     position: absolute;
-    left: 50%; /* Start the line at the center */
-    bottom: 0; /* Align to the bottom of the element */
-    transform: translateX(-50%); /* Center the line */
-    width: 50%; /* Line is 50% of the element's width */
-    border-bottom: 1px solid white; /* White line */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 1px solid #414141;
 }
 
 /* General rule for other elements */
-header, main, h2, p, ul, li {
-    color: white;
+header, main, p, ul, li {
+    color: #FFFFFF;
+}
+
+p {
+    text-align: left;
+    margin-bottom: 15px;
 }
 
 .container {
     margin: 0 auto;
     max-width: 800px;
+    padding: 20px;
+    background-color: #1D2226;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 header {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+header p {
+    text-align: center;
+    color: #B7B7B7;
+    font-size: 1em;
+    margin-top: 5px;
 }
 
 section {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    background-color: #1D2226;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #3E3E3E;
+}
+
+.job, .education, .skill-category {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #3E3E3E;
+}
+
+.job:last-child, .education:last-child, .skill-category:last-child {
+    border-bottom: none;
 }
 
 a {
-    color: yellow;
-    text-decoration: none; /* Removes underline */
+    color: #70B5F9;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-/* Optional: To change the color when hovering over the link */
 a:hover {
-    color: orange;
+    color: #A5D6FF;
+    text-decoration: underline;
 }
 
-.underline {
-    border-bottom: 2px solid #5b5b5b;  /* change the color and thickness as needed */
-}
 .contact-info {
-    background-color: #5b5b5b; /* light gray background */
-    color: black; /* text color */
-    padding: 15px;
+    background-color: #2D3A46;
+    color: #FFFFFF;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    margin: 15px 0;
 }
 
 .contact-info p {
@@ -76,13 +129,39 @@ a:hover {
 .contact-info ul {
     list-style: none;
     padding: 0;
+    text-align: left;
 }
 
 .contact-info li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-size: 16px;
 }
 
 .contact-info strong {
     font-weight: 600;
+    color: #B7B7B7;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.4em;
+    }
+    
+    h3 {
+        font-size: 1.2em;
+    }
+}
+
+/* Animation for section reveal */
+main section div {
+    transition: all 0.5s ease;
 }
